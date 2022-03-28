@@ -68,3 +68,7 @@ foreach($line in Get-Content .\name.txt) {
 if($line -match $regex) {
 choco install $line -s http://url/ -u "name" -p "password" -y
 }}
+
+
+
+ cat chocolatey.log | grep -iE "^Chocolatey installed|Installing the following packages:$" -A 1
